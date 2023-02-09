@@ -1,0 +1,22 @@
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: z('header');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 44px;
+
+    &__logo {
+        font-size: 36px;
+        line-height: 1;
+
+        @media screen and (max-width: 600px) {
+            font-size: 20px;
+        }
+
+        svg {
+            fill: #fff;
+        }
+    }
+}

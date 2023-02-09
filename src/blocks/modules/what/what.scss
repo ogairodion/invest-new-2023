@@ -1,0 +1,142 @@
+.what {
+    position: relative;
+    padding-top: 185px;
+    padding-bottom: 112px;
+
+    @media screen and (max-width: 1099px) {
+        padding-top: 88px;
+        padding-bottom: 69px;
+    }
+
+    .l-default {
+        @media screen and (max-width: 600px) {
+            padding: 0 38px; 
+        }
+    }
+
+    &__snow {
+        position: absolute;
+
+        @media screen and (max-width: 1099px) {
+            width: 213px;
+        }
+
+        &-left {
+            top: 205px;
+            left: -100px;
+
+            @media screen and (max-width: 1099px) {
+                top: 20px;
+                left: -150px;
+            }
+        }
+
+        &-right {
+            bottom: -30px;
+            right: 0;
+
+            @media screen and (max-width: 1099px) {
+                bottom: 0;
+                right: -70px;
+            }
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 56px;
+
+        @media screen and (max-width: 600px) {
+            margin-bottom: 30px;
+        }
+    }
+    
+    &__item {
+        display: flex;
+        align-items: center;
+
+        &:nth-child(2n) {
+            flex-direction: row-reverse;
+
+            .what {
+                &__item {
+                    &-icon {
+                        margin-right: 0;
+                        margin-left: 38px;
+                    }
+
+                    &-text {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        &-icon {
+            min-width: 165px;
+            margin-right: 38px;
+
+            @media screen and (max-width: 1099px) {
+                min-width: 100px;
+            }
+    
+            @media screen and (max-width: 600px) {
+                min-width: 75px;
+                margin-right: 12px;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &-text {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 120%;
+
+            @media screen and (max-width: 600px) {
+                font-size: 15px;
+                padding-top: 15px;
+            }
+        }
+    }
+
+    &__prizes {
+        margin-left: 200px;
+        margin-top: 80px;
+
+        @media screen and (max-width: 1099px) {
+            margin-left: 0;
+        }
+
+        @media screen and (max-width: 600px) {
+            margin-top: 20px;
+        }
+
+        &-title {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 40px;
+
+            @media screen and (max-width: 600px) {
+                font-size: 20px;
+                margin-bottom: 0;
+            }
+        }
+
+        &-list {
+            padding-left: 28px;
+            
+            li {
+                font-size: 22px;
+                margin-bottom: 20px;
+
+                @media screen and (max-width: 600px) {
+                    font-size: 16px;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+}

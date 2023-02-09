@@ -1,0 +1,186 @@
+.program {
+    position: relative;
+    padding-top: 137px;
+
+    @media screen and (max-width: 600px) {
+        padding-top: 50px;
+    }
+
+    .l-default {
+        @media screen and (max-width: 600px) {
+            padding: 0 38px; 
+        }
+    }
+
+    &__title {
+        text-align: center;
+    }
+    
+    &__subtitle {
+        font-size: 37px;
+        line-height: 120%;
+        text-align: center;
+        margin-bottom: 47px;
+
+        @media screen and (max-width: 1199px) {
+            font-size: 24px; 
+        }
+
+        @media screen and (max-width: 600px) {
+            font-size: 19px; 
+            margin-bottom: 33px;   
+        }
+    }
+
+    &__tabs {
+        margin-bottom: 47px;
+
+        @media screen and (max-width: 600px) {
+            margin-bottom: 37px;
+        }
+    }
+
+    &__tab {
+        width: 130px !important;
+        font-size: 21px;
+        line-height: 1;
+        font-weight: 600;
+        text-align: center;
+        color: $red;
+        border: 3px solid $red;
+        border-radius: 70px;
+        padding: 5px 0;
+
+        @media screen and (max-width: 600px) {
+            width: 100%;
+        }
+    }
+
+    .swiper-container {
+        overflow: visible;
+        width: 100%;
+    }
+
+    .swiper-slide {
+        cursor: pointer;
+        opacity: .4;
+
+        &-active {
+            @media screen and (max-width: 600px) {
+                opacity: 1;
+            }
+        }
+
+        &.active {
+            @media screen and (min-width: 600px) {
+                opacity: 1;
+            }
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: calc(-100% + 8px);
+            width: 102px;
+            height: 1px;
+            background: url('.././img/svg/program/dotted.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            @media screen and (max-width: 600px) {
+                width: 70px;
+                right: -68%;
+            }
+        }
+
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    &__content {
+        animation: show .4s ease;
+        margin-bottom: 100px;
+
+        @media screen and (max-width: 600px) {
+            margin-bottom: 0;
+        }
+
+        &-date {
+            font-size: 49px;
+            line-height: 1;
+            font-weight: 900;
+            text-align: center;
+            color: $red;
+            margin-bottom: 51px;
+
+            @media screen and (max-width: 600px) {
+                font-size: 24px;
+                margin-bottom: 26px;
+            }
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px -50px;
+
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+            margin: 0;
+        }
+    }
+
+    &__item {
+        width: calc(50% - 30px);
+        margin: 0 15px 50px;
+
+        @media screen and (max-width: 600px) {
+            width: 100%;
+            margin: 0 0 30px;
+        }
+
+        &-top {
+            display: flex;
+            align-items: center;
+            margin-bottom: 13px;
+
+            @media screen and (max-width: 600px) {
+                margin-bottom: 10px;   
+            }
+        }
+
+        &-icon {
+            margin-right: 15px;
+
+            @media screen and (max-width: 600px) {
+                img {
+                    display: block;
+                    width: auto;
+                    height: 30px;
+                    min-height: 30px;
+                }
+            }
+        }
+
+        &-title {
+            font-size: 20px;
+            line-height: 120%;
+            font-weight: 900;
+        }
+
+        &-text {
+            font-size: 20px;
+            line-height: 120%;
+
+            @media screen and (max-width: 600px) {
+                font-size: 16px;
+            }
+        }
+    }
+}

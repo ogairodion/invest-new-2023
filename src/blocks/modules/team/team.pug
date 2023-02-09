@@ -1,0 +1,50 @@
+-
+    const team = [
+        {
+            img: 'pirogov',
+            name: 'Сергей Пирогов',
+            position: 'CEO Invest Heroes',
+            text: 'Главный управляющий IH будет проводить эфиры на марафоне',
+        },
+        {
+            img: 'sayganov',
+            name: 'Александр Сайганов',
+            position: 'Head of Research',
+            text: 'Вместе с командой аналитиков ответит на ваши вопросы',
+        },
+        {
+            img: 'dubrovina',
+            name: 'Светлана Дубровина',
+            position: 'Senior Analyst',
+            text: 'Вместе с командой аналитиков ответит на ваши вопросы',
+        },
+        {
+            img: 'novichkov',
+            name: 'Дмитрий Новичков',
+            position: 'Senior Analyst',
+            text: 'Вместе с командой аналитиков ответит на ваши вопросы',
+        },
+    ]
+
+section.team 
+    .branch 
+        img(src="img/svg/branch.svg", alt="")
+    .branch 
+        img(src="img/svg/branch.svg", alt="")
+    .l-default 
+        h2.team__title.title.title--h2 кто будет вести
+        .team__subtitle МАРАФОН
+        .team__slider.swiper-container 
+            .swiper-wrapper
+                each team_item in team
+                    .team__slide.swiper-slide
+                        .team__slide-img 
+                            +webp(['team/' + team_item.img], 'png')
+                        .team__slide-name= team_item.name
+                        .team__slide-position= team_item.position
+                        .team__slide-text= team_item.text
+        .team__slider-arrow.team__slider-arrow--prev    
+            img(src="img/svg/arrow.svg", alt="")
+        .team__slider-arrow.team__slider-arrow--next
+            img(src="img/svg/arrow.svg", alt="")
+

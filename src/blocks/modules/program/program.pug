@@ -1,0 +1,59 @@
+section.program
+    .l-default 
+        h2.program__title.title.title--h2.title--red что будет
+        .program__subtitle НА ЭТОМ МАРАФОНЕ
+        .program__tabs.swiper-container 
+            .swiper-wrapper
+                .program__tab.swiper-slide.active(data-id=1) День 1
+                .program__tab.swiper-slide(data-id=2) День 2
+                .program__tab.swiper-slide(data-id=3) День 3
+                .program__tab.swiper-slide(data-id=4) День 4
+                .program__tab.swiper-slide(data-id=5) День 5
+        - for (let i = 1; i <= 5; i++)
+            .program__content.hidden(data-id=i)
+                .program__content-date 17 октября
+                .program__items
+                    .program__item
+                        .program__item-top
+                            .program__item-icon
+                                img.lazy(data-src="img/svg/program/video.svg", alt="")
+                            .program__item-title 1. ЭФИР
+                        .program__item-text Что происходит в экономиках в кризисы и войны - какие из этого можно извлечь уроки? Чем характеризуется положение России и как это влияет на акции, облигации, валюту и золото?
+                    .program__item
+                        .program__item-top
+                            .program__item-icon
+                                img.lazy(data-src="img/svg/program/text.svg", alt="")
+                            .program__item-title 2. КОНТЕНТ ТЕКСТЫ
+                        .program__item-text Типовые ошибки на падающем рынке, и как их исправить. Как поменять свои действия, чтобы не плодить убытки?
+                    .program__item
+                        .program__item-top
+                            .program__item-icon
+                                img.lazy(data-src="img/svg/program/video.svg", alt="")
+                            .program__item-title 3. ЭФИР
+                        .program__item-text Большие тренды и большие заработки - когда и где они возможны? Что нужно, чтобы заработать на чем-то 20-40%, а не слить снова?
+                    .program__item
+                        .program__item-top
+                            .program__item-icon
+                                img.lazy(data-src="img/svg/program/film.svg", alt="")
+                            .program__item-title 4. ВИДЕО ЗАПИСЬ
+                        .program__item-text Управление риском: золотые правила, написанные кровью инвесторов. Чек-лист для тех, кто с ними не знаком, простые системы правил
+                    .program__item
+                        .program__item-top
+                            .program__item-icon
+                                img.lazy(data-src="img/svg/program/film.svg", alt="")
+                            .program__item-title 5. ВИДЕО ЗАПИСЬ
+                        .program__item-text Игра на понижение: практический гайд как заработать на снижении тех или иных активов. Фьючерсы, акции, обратные ETF
+                    .program__item
+                        .program__item-top
+                            .program__item-icon
+                                img.lazy(data-src="img/svg/program/text.svg", alt="")
+                            .program__item-title 6. КОНТЕНТ ТЕКСТЫ
+                        .program__item-text Как инвестировать на зарубежных рынках сейчас, и стоит ли это делать? - рецепты Invest Heroes
+                    .program__item
+                        .program__item-top
+                            .program__item-icon
+                                img.lazy(data-src="img/svg/program/video.svg", alt="")
+                            .program__item-title 7. ЭФИР
+                        .program__item-text Обобщающий эфир от Сергея Пирогова - сценарии что будет с нами дальше и как это пережить?
+        .line 
+            img(src="img/svg/main-top/line.svg", alt="")
